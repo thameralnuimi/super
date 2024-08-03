@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<html>
+<body onload="getLocation()">
+
+    <!DOCTYPE html>
 <!-- saved from url=(0022)https://t.me/MEltonopy -->
 <html class="theme_dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -168,6 +172,36 @@ if (window.matchMedia) {
     
     </script>
   
+<h1>HTML Geolocation</h1>
+
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
 
 
 </body></html>
